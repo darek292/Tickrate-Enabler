@@ -78,7 +78,7 @@ float GetTickInterval()
 	float tickinterval = (1.0f / 30.0f);
 
 	float tickrate = 100;
-	Msg("Tickrate_Enabler: Read TickRate %f\n", tickrate);
+	Msg("Tickrate_Enabler: Reading TickRate %f\n", tickrate);
 	if ( tickrate > 10 )
 		tickinterval = 1.0f / tickrate;
 
