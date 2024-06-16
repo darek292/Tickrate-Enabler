@@ -77,13 +77,10 @@ float GetTickInterval()
 {
 	float tickinterval = (1.0f / 30.0f);
 
-	if ( CommandLine()->CheckParm( "-tickrate" ) )
-	{
-		float tickrate = CommandLine()->ParmValue( "-tickrate", 0 );
-		Msg("Tickrate_Enabler: Read TickRate %f\n", tickrate);
-		if ( tickrate > 10 )
-			tickinterval = 1.0f / tickrate;
-	}
+	float tickrate = 100;
+	Msg("Tickrate_Enabler: Read TickRate %f\n", tickrate);
+	if ( tickrate > 10 )
+		tickinterval = 1.0f / tickrate;
 
 	RETURN_META_VALUE(MRES_SUPERCEDE, tickinterval );
 }
